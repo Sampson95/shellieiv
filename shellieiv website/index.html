@@ -1,0 +1,102 @@
+<!doctype html5>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	function submit() {
+		var x = document.forms["myForm"]["name"].value;
+    	if (x == "") {
+    	    alert("Name must be filled out");
+    	    return false;
+    	}
+	}
+
+	$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</head>
+<link href="main.css" rel="stylesheet" type="text/css">
+<body>
+<div class="header" align="center"> 
+	<ul>
+    	<li><a href="#section1" >Projects</a></li><a href="#section2">Resume</a><li></li><li> <a href="#section3">Contact</a></li> 
+    </ul>
+</div>
+<div class="mainContent">
+<p></p>
+<div class="projects">
+  <h1 id="section1" align="center" style="color:black">PROJECTS</h1>      
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AQdDtpXsnI" frameborder="0" allowfullscreen></iframe>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Uxo-79Nsd1U" frameborder="0" allowfullscreen></iframe>
+<br><br><br><br>
+<dl id="simple-gallery">
+<dt tabindex="1"><img src="images/Africa.png" alt> 
+<dd><img src="images/Africa.png" style="height: 375px;" alt> Interview of African students expressing their pride </dd></dt>
+<dt tabindex="2"><a href="http://groslen.com/index.html"><img src="images/logo.png" alt></a></dt>
+<dd><img src="images/logo.png" alt>Visit Groslen.com for more detail</dd></dl>
+<br><br><br><br><br><br><br><br><br><br><br><br><hr>
+<h2 align="center" style="color:black; z-index:-1;">Interactive Space Game Wireframe</h2>
+<embed src="media/GasGiantAdventure.pdf" width="100%" height="100%" />
+</div>
+<div class="resume">
+<h1 id="section2" align="center" style="color:black">RESUME</h1> 
+<iframe src="https://docs.google.com/document/d/1vp6KJT6dnbjJ6kBKKKYA_AbW__g8REhWvwPZ_TH278M/edit?usp=sharing" style=" height:1000px; width:80%" frameborder="0"></iframe>
+</div>
+<div class="contact">
+ <h1 id="section3" align="center" >CONTACT ME:</h1>
+ 
+<br>
+
+<form name="myForm" action="mailto:shelliesampsoniv@gmail.com" method="post" enctype="text/plain" onSubmit="return submit()">
+<fieldset>
+<legend> Let's Talk </legend>
+<br>
+Name: <br>
+<input type="text" name="name"  /> <br><br>
+E-mail:<br>
+<input type="text" name="mail" /> <br><br>
+Comment:<br>
+<input type="text" name="comment" /> <br><br>
+
+<input type="reset" value="Clear">
+<input type="button"  value="Send" id="send"/> 
+</fieldset>
+</form>
+
+</div>
+</div>
+
+
+<span class="copyright">
+<!--#include file="copyright.shtml"-->
+</span>
+
+
+</body>
+</html>
